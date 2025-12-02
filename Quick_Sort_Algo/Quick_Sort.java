@@ -8,7 +8,9 @@
 import java.util.ArrayList;
 public class Quick_Sort
 {
-    public static void main(String args) {
-        ArrayList<> numbers = new ArrayList<>();
+    public static void main(String args) 
+    {
+        ArrayList<Integer> array = new ArrayList<Integer>();
+        int number = 0;
     }
 }
