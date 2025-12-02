@@ -2,10 +2,13 @@
 /**
  * Write a description of class Quick_Sort here.
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @ Aidan, Liam, and Lorne
+ * @Dec 2 2025
  */
+import java.util.ArrayList;
 public class Quick_Sort
 {
-    // testing push with collaberation fr fr
+    public static void main(String args) {
+        ArrayList<> numbers = new ArrayList<>();
+    }
 }
