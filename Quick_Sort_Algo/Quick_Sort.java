@@ -1,16 +1,30 @@
-
 /**
  * Write a description of class Quick_Sort here.
  *
- * @ Aidan, Liam, and Lorne
- * @Dec 2 2025
+ * @ Aidan, Liam, and Lorne.
+ * @ Dec 2 - #, 2025.
  */
-import java.util.ArrayList;
 public class Quick_Sort
 {
-    public static void main(String args) 
+    public static void main(String[] args) 
     {
-        ArrayList<Integer> array = new ArrayList<Integer>();
+        int[] list = {4,9,6,7,5,8,3,1,2};
         int number = 0;
+        
+        quickSearch(list, number);
+    }
+    
+    public static int quickSearch(int[] list, int number)
+    {
+        System.out.println(list);
+        number = list.length - 1;
+        for(int i = 1; i < list.length; i++)
+        {
+            if(number <= (list.length - i))
+            {
+                System.out.println(list);
+            }
+        }
+        return number;
     }
 }
