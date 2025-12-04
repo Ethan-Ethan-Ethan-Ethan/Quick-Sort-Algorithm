@@ -16,6 +16,7 @@ public class Quick_Sort
     
     public static int quickSearch(int[] list, int number)
     {
+        /*
         System.out.println(list);
         number = list.length - 1;
         for(int i = 1; i < list.length; i++)
@@ -26,5 +27,12 @@ public class Quick_Sort
             }
         }
         return number;
+        */
+        
+       //int index = list.length/2;
+       number = list[list.length/2];
+       System.out.println(number);
+       
+       return number;
     }
 }
