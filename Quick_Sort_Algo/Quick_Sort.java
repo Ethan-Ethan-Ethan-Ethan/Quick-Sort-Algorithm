@@ -36,18 +36,22 @@ public class Quick_Sort
          
         for(int i = 0; i < list.length; i++)
         {
-            System.out.print(list[i]);
+            //System.out.print(list[i]);
             if(list[i] > number)
             {
-                System.out.println(" is Bigger");
+                System.out.println(list[i]+" is Bigger");
+                list[i] = small[i];
+                //System.out.println("s" + small[i] + "q" + list[i]);
             }
             else if(list[i] == number)
             {
-                System.out.println(" is Equal");
+                System.out.println(list[i]+" is Equal");
+                
             }
             else
             {
-                System.out.println(" is Smaller");
+                System.out.println(list[i]+" is Smaller");
+                list[i] = big[i];
             }
         }
         
