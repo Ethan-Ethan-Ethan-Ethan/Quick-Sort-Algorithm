@@ -16,8 +16,8 @@ public class Quick_Sort
     
     public static int quickSearch(int[] list, int number)
     {
-        int[] small = {0,0,0,0,0,0,0,0,0};
-        int[] big = {0,0,0,0,0,0,0,0,0};
+        int[] small = new int[9];
+        int[] big = new int[9];
         
         number = list[list.length/2];
          
@@ -28,26 +28,38 @@ public class Quick_Sort
             {
                 System.out.println(list[i]+" is Bigger");
                 big[i] = list[i];
-                System.out.println(big[i]);
+                //System.out.println(big[i]);
+                System.out.println("Index " + i);
             }
             else if(list[i] == number)
             {
                 System.out.println(list[i]+" is Equal");
             }
-            else
+            else if (list[i] < number)
             {
                 System.out.println(list[i]+" is Smaller");
                 small[i] = list[i];
-                System.out.println(small[i]);
+                //System.out.println(small[i]);
+                System.out.println("Index " + i);
             }
         }
         
         for(int i = 0; i < small.length; i++)
         {
-            System.out.print(small[i]);
+            System.out.print(small[i]); // prints 400000312 
+            // (Numbers are located based off of origonal index, meaning 0
+            // is just a filler)
         }
+        System.out.println("\n");
         
-        System.out.println(" ");
+        for(int i = 0; i < big.length; i++)
+        {
+            System.out.print(big[i]); // prints 096708000 
+            // (Numbers are located based off of origonal index, meaning 0
+            // is just a filler)
+        }
+
+        //System.out.println(" ");
         
         return number;
     }
