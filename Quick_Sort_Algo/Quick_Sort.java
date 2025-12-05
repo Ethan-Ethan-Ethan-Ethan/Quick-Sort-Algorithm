@@ -19,19 +19,6 @@ public class Quick_Sort
         int[] small = {0,0,0,0,0,0,0,0,0};
         int[] big = {0,0,0,0,0,0,0,0,0};
         
-        /*
-        System.out.println(list);
-        number = list.length - 1;
-        for(int i = 1; i < list.length; i++)
-        {
-            if(number <= (list.length - i))
-            {
-                System.out.println(list);
-            }
-        }
-        return number;
-        */
-        
         number = list[list.length/2];
          
         for(int i = 0; i < list.length; i++)
@@ -40,20 +27,27 @@ public class Quick_Sort
             if(list[i] > number)
             {
                 System.out.println(list[i]+" is Bigger");
-                list[i] = small[i];
-                //System.out.println("s" + small[i] + "q" + list[i]);
+                big[i] = list[i];
+                System.out.println(big[i]);
             }
             else if(list[i] == number)
             {
                 System.out.println(list[i]+" is Equal");
-                
             }
             else
             {
                 System.out.println(list[i]+" is Smaller");
-                list[i] = big[i];
+                small[i] = list[i];
+                System.out.println(small[i]);
             }
         }
+        
+        for(int i = 0; i < small.length; i++)
+        {
+            System.out.print(small[i]);
+        }
+        
+        System.out.println(" ");
         
         return number;
     }
