@@ -21,12 +21,6 @@ public class Quick_Sort_TestV2
         // adds the amount for a list
         int bigCount = 0;
         int smallCount = 0;
-        
-        int[] big = new int[bigCount];
-        int[] small = new int[smallCount];
-        
-        int bigger = 0;
-        int smaller = 0;
          
         for(int i = 0; i < list.length; i++)
         {
@@ -39,7 +33,7 @@ public class Quick_Sort_TestV2
                 // System.out.println(big[i]);
                 // System.out.println("Index " + i);
                 
-                bigCount--;
+                bigCount++;
             }
             else if(list[i] == number)
             {
@@ -57,31 +51,38 @@ public class Quick_Sort_TestV2
             }
         }
         
+                // arrays
+        int[] big = new int[bigCount];
+        int[] small = new int[smallCount];
+        
+        int bigger = 0;
+        int smaller = 0;
+        
         for(int i = 0; i < list.length; i++)
         {
             if(list[i] > number)
             {
-                //System.out.println(list[i]+" is Bigger");
-                //big[bigCount] = list[i];
+                System.out.println(list[i]+" is Bigger");
+                big[bigger] = list[i];
                 
                 // System.out.println(big[i]);
                 // System.out.println("Index " + i);
                 
-                bigCount--;
+                bigger++;
             }
             else if (list[i] < number)
             {
-                //System.out.println(list[i]+" is Smaller");
-                //small[smallCount] = list[i];
+                System.out.println(list[i]+" is Smaller");
+                small[smaller] = list[i];
                 
                 // System.out.println(small[i]);
                 // System.out.println("Index " + i);
                 
-                smallCount++;
+                smaller++;
             }
         }
         
-        /*
+        
         System.out.println(" ");
         
         for(int i = 0; i < small.length; i++)
@@ -99,7 +100,7 @@ public class Quick_Sort_TestV2
         }
 
         System.out.println(" ");
-        */
+        
         return number;
     }
 }
