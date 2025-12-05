@@ -16,6 +16,9 @@ public class Quick_Sort
     
     public static int quickSearch(int[] list, int number)
     {
+        int[] small = {0,0,0,0,0,0,0,0,0};
+        int[] big = {0,0,0,0,0,0,0,0,0};
+        
         /*
         System.out.println(list);
         number = list.length - 1;
@@ -29,10 +32,25 @@ public class Quick_Sort
         return number;
         */
         
-       //int index = list.length/2;
-       number = list[list.length/2];
-       System.out.println(number);
-       
-       return number;
+        number = list[list.length/2];
+         
+        for(int i = 0; i < list.length; i++)
+        {
+            System.out.print(list[i]);
+            if(list[i] > number)
+            {
+                System.out.println(" is Bigger");
+            }
+            else if(list[i] == number)
+            {
+                System.out.println(" is Equal");
+            }
+            else
+            {
+                System.out.println(" is Smaller");
+            }
+        }
+        
+        return number;
     }
 }
