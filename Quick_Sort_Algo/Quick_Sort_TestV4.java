@@ -9,15 +9,17 @@ public class Quick_Sort_TestV4
     public static void main(String[] args) 
     {
         int[] list = {4,9,6,7,5,8,3,1,2};
-        int number = 0;
+        int number = list[list.length/2];
         
         quickSearch(list, number);
     }
     
     public static int quickSearch(int[] list, int number)
-        {
-        number = list[list.length/2];
-        
+    {
+        if (list.length < 2) {
+            return number;
+        }
+            
         // adds the amount for a list
         int bigCount = 0;
         int smallCount = 0;
@@ -57,21 +59,10 @@ public class Quick_Sort_TestV4
             }
         }
         
-        System.out.println(" ");
+        int middle = number / 2;
         
-        for(int i = 0; i < small.length; i++)
-        {
-            System.out.print(small[i]);
-        }
-        
-        System.out.println(" ");
-        
-        for(int i = 0; i < big.length; i++)
-        {
-            System.out.print(big[i]);
-        }
-
-        System.out.println(" ");
+        quickSearch(big,middle);
+        quickSearch(big,middle);
         
         return number;
     }
