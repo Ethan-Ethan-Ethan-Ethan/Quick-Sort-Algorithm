@@ -81,14 +81,37 @@ public class Quick_Sort_TestV5
         //quickSort(list, big, small);
     }
     
-    public static void quickSort(int[] list, int[] big, int[] small)
+    public static void quickSort(int[] list, int[] big, int[] small, int[] equal)
     {
-        /*
         // More arrays
-        int [] sortedSmall = {smallCount};
-        int [] sortedBig = {bigCount};
-        
-        int [] finalList = {sortedSmall.length + equal(prob need fixing) + sortedBig.length};
+        /*
+        int [] sortedBig = {big.length};
+        int [] sortedSmall = {small.length};
+        int [] middleIndex = {equal.length};
         */
+        
+       int [] finalList = {small.length + equal.length + big.length};
+       int index = 0;
+       
+       // copy sorted array into new array
+       for(int i = 0; i < small.length; i++) 
+       {
+           finalList[i] = small[i];
+           System.out.println("Array S " + finalList[i]);
+           index++;
+        }
+        for(int i = 0; i < equal.length; i++) 
+       {
+           finalList[i] = equal[i];
+           System.out.println("Array M " + finalList[i]);
+           index++;
+        }
+        for(int i = 0; i < big.length; i++) 
+       {
+           finalList[i] = big[i];
+           System.out.println("Array B " + finalList[i]);
+           index++;
+        }
+       
     }
 }
