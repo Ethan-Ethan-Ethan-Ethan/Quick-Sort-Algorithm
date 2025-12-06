@@ -8,7 +8,7 @@ public class Quick_Sort_TestV4B
 {
     public static void main(String[] args) 
     {
-        int[] list = {4,9,6,7,5,8,3,1,2};
+        int[] list = {4,9,6,7,5,3,1,2};
         int length = list.length;
         
         quickSplit(list, length);
@@ -19,28 +19,32 @@ public class Quick_Sort_TestV4B
         }
     }
     
-    public static void quickSplit(int[] list, int length)
+    public static void quickSplit(int[] array, int length)
     {
-        if (length < 2) {
+        if (array.length <= 1) 
+        {
             return;
         }
            
-        int middle = list[list.length/2];
+        int middle = array[array.length/2];
         
         // adds the amount for a list
         int bigCount = 0;
         int smallCount = 0;
         
-        for(int i = 0; i < length; i++)
+        for(int i = 0; i < array.length; i++)
         {
-            if(list[i] > middle)
+            if(array[i] > middle)
             {
                 bigCount++;
             }
-            else if(list[i] == length){}
-            else 
+            else if (array[i] < middle)
             {
                 smallCount++;
+            }
+            else if(array[i] == middle)
+            {
+                //System.out.println(array[i]+" is Equal");
             }
         }
         
@@ -50,33 +54,41 @@ public class Quick_Sort_TestV4B
         int bigger = 0;
         int smaller = 0;
         
-        for(int i = 0; i < list.length; i++)
+        for(int i = 0; i < array.length; i++)
         {
-            if(list[i] > middle)
+            if(array[i] > middle)
             {
-                System.out.println(list[i]+" is Bigger");
-                big[bigger] = list[i];
+                //System.out.println(array[i]+" is Bigger");
+                big[bigger] = array[i];
                 bigger++;
             }
-            else if (list[i] < middle)
+            else if (array[i] < middle)
             {
-                System.out.println(list[i]+" is Smaller");
-                small[smaller] = list[i];
+                //System.out.println(array[i]+" is Smaller");
+                small[smaller] = array[i];
                 smaller++;
             }
-            else if(list[i] == middle) 
+            else if(array[i] == middle) 
             {
-                System.out.println(list[i]+" is Equal");
+                //System.out.println(array[i]+" is Equal");
             }
         }
         
-        quickSplit(big, middle);
+        System.out.println("Running 1");
+        quickSplit(big, middle - 1);
+        System.out.println("Running 2");
         quickSplit(small, length - middle);
         
-        quickSort(list, big, small);
+        //for(int i = 0; i < small.length; i++)
+        //{
+            //System.out.print(small[i]);
+        //}
+        
+        System.out.println("Sorting");
+        quickSort(array, big, small);
     }
     
-    public static void quickSort(int[] list, int[] big, int[] small)
+    public static void quickSort(int[] array, int[] big, int[] small)
     {
         int smallLength = small.length;
         int bigLength = big.length;
@@ -88,16 +100,16 @@ public class Quick_Sort_TestV4B
         {
             if (small[index] <= big[index]) 
             {
-                list[b_index] = small[index];
+                array[b_index] = small[index];
                 b_index++;
                 index++;
             }
             else 
             {
-                list[b_index] = big[s_index];
+                array[b_index] = big[s_index];
                 b_index++;
                 s_index++;
             }
-        }
+        } 
     }
 }
