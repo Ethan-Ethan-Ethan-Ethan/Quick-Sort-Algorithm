@@ -9,12 +9,12 @@ public class Quick_Sort_TestV5
     public static void main(String[] args) 
     {
         int[] list = {4,9,6,7,5,8,3,1,2};
-        int length = list.length;
+        //int length = list.length;
         
-        quickSplit(list, length);
+        quickSplit(list);
     }
     
-    public static void quickSplit(int[] list, int length)
+    public static void quickSplit(int[] list)
     {
         if (list.length < 2) {
             return;
@@ -68,12 +68,14 @@ public class Quick_Sort_TestV5
             }
             else if(list[i] == middle) 
             {
+                System.out.println(list[i]+" is Equal");
                 equal[equalIndex] = list[i];
+                equalIndex++;
             }
         }
         
-        //quickSplit(big, big.length);
-        //quickSplit(small, small.length);
+        quickSplit(big);
+        quickSplit(small);
         
         
         //quickSort(list, big, small);
@@ -86,7 +88,7 @@ public class Quick_Sort_TestV5
         int [] sortedSmall = {smallCount};
         int [] sortedBig = {bigCount};
         
-        int [] finalList = {sortedSmall.length + 1 + sortedBig.length};
+        int [] finalList = {sortedSmall.length + equal(prob need fixing) + sortedBig.length};
         */
     }
 }
