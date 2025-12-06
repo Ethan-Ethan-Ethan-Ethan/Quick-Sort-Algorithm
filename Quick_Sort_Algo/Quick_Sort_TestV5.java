@@ -81,14 +81,16 @@ public class Quick_Sort_TestV5
         //quickSort(list, big, small);
     }
     
-    public static void quickSort(int[] list, int[] big, int[] small)
+    public static void quickSort(int[] list, int[] big, int[] small, int[] equal)
     {
-        /*
         // More arrays
-        int [] sortedSmall = {smallCount};
-        int [] sortedBig = {bigCount};
-        
-        int [] finalList = {sortedSmall.length + equal(prob need fixing) + sortedBig.length};
+        /*
+        int [] sortedBig = {big.length};
+        int [] sortedSmall = {small.length};
+        int [] middleIndex = {equal.length};
         */
+        
+       int [] finalList = {small.length + equal.length + big.length};
+       int index = 0;
     }
 }
