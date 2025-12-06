@@ -9,49 +9,38 @@ public class Quick_Sort_TestV4
     public static void main(String[] args) 
     {
         int[] list = {4,9,6,7,5,8,3,1,2};
-        int number = list[list.length/2];
+        int length = list.length;
         
-        quickSearch(list, number);
+        quickSplit(list, length);
     }
     
-    public static int quickSearch(int[] list, int number)
+    public static void quickSplit(int[] list, int length)
     {
         if (list.length < 2) {
-            return number;
+            return;
         }
-            
+           
+        int middle = length / 2;
+        
         // adds the amount for a list
         int bigCount = 0;
         int smallCount = 0;
-         
-        for(int i = 0; i < list.length; i++)
-        {
-            if(list[i] > number)
-            {
-                bigCount++;
-            }
-            else if(list[i] == number){}
-            else
-            {
-                smallCount++;
-            }
-        }
         
-        int[] big = new int[bigCount];
-        int[] small = new int[smallCount];
+        int[] big = new int[middle];
+        int[] small = new int[length - middle];
         
         int bigger = 0;
         int smaller = 0;
         
         for(int i = 0; i < list.length; i++)
         {
-            if(list[i] > number)
+            if(list[i] > length)
             {
                 System.out.println(list[i]+" is Bigger");
                 big[bigger] = list[i];
                 bigger++;
             }
-            else if (list[i] < number)
+            else if (list[i] < length)
             {
                 System.out.println(list[i]+" is Smaller");
                 small[smaller] = list[i];
@@ -59,11 +48,15 @@ public class Quick_Sort_TestV4
             }
         }
         
-        int middle = number / 2;
+        quickSplit(big, length);
+        quickSplit(small, length);
         
-        quickSearch(big,middle);
-        quickSearch(big,middle);
         
-        return number;
+        quickSort(list, big, small);
+    }
+    
+    public static void quickSort(int[] list, int[] big, int[] small)
+    {
+        
     }
 }
