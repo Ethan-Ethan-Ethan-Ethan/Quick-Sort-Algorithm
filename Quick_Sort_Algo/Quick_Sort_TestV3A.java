@@ -17,12 +17,15 @@ public class Quick_Sort_TestV3A
     
     public static int quickSearch(int[] list)
     {
+        /*
+        // Recursion 
         if (list.length <= 1) 
         {
             return list;
         }
-        
-        int number = list[list.length/2];
+        */
+       
+       int number = list[list.length/2];
         // adds the amount for a list
         int bigCount = 0;
         int smallCount = 0;
@@ -56,36 +59,25 @@ public class Quick_Sort_TestV3A
             {
                 System.out.println(list[i]+" is Bigger");
                 big[bigger] = list[i];
-                
-                // System.out.println(big[i]);
-                // System.out.println("Index " + i);
-                
                 bigger++;
             }
             else if (list[i] < number)
             {
                 System.out.println(list[i]+" is Smaller");
                 small[smaller] = list[i];
-                
-                // System.out.println(small[i]);
-                // System.out.println("Index " + i);
-                
                 smaller++;
             }
         }
         
-        
         System.out.println(" ");
         for(int i = 0; i < small.length; i++)
         {
-            System.out.print(small[i]); // prints 400000312 
-            // (Numbers are located based off of original index, meaning 0 is just a filler)
+            System.out.print(small[i]);
         }
         System.out.println(" ");
         for(int i = 0; i < big.length; i++)
         {
-            System.out.print(big[i]); // prints 096708000 
-            // (Numbers are located based off of original index, meaning 0 is just a filler)
+            System.out.print(big[i]);
         }
         System.out.println(" ");
         
