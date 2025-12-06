@@ -10,21 +10,19 @@ public class Quick_Sort_TestV3A
     {
         int[] list = {4,9,6,7,5,8,3,1,2};
         
-        //int [] finalList = {};
-        
         quickSearch(list);
     }
     
     public static int quickSearch(int[] list)
     {
         /*
-        // Recursion 
+        // Recursion (Not working)
         if (list.length <= 1) 
         {
             return list;
         }
-        */
-       
+       */
+      
        int number = list[list.length/2];
         // adds the amount for a list
         int bigCount = 0;
@@ -80,6 +78,12 @@ public class Quick_Sort_TestV3A
             System.out.print(big[i]);
         }
         System.out.println(" ");
+        
+        // More arrays
+        int [] sortedSmall = {smallCount};
+        int [] sortedBig = {bigCount};
+        
+        int [] finalList = {sortedSmall.length + 1 + sortedBig.length};
         
         return number;
     }
