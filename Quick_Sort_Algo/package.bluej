@@ -1,16 +1,24 @@
 #BlueJ package file
+<<<<<<< Updated upstream
 editor.fx.0.height=1056
 editor.fx.0.width=1936
 editor.fx.0.x=-8
 editor.fx.0.y=-8
 objectbench.height=66
+=======
+editor.fx.0.height=1246
+editor.fx.0.width=2071
+editor.fx.0.x=594
+editor.fx.0.y=91
+objectbench.height=183
+>>>>>>> Stashed changes
 objectbench.width=1896
 package.divider.horizontal=0.6
 package.divider.vertical=0.9229957805907173
 package.editor.height=868
 package.editor.width=1806
-package.editor.x=0
-package.editor.y=0
+package.editor.x=806
+package.editor.y=266
 package.frame.height=1048
 package.frame.width=1936
 package.numDependencies=0
@@ -31,6 +39,7 @@ target1.width=120
 target1.x=70
 target1.y=10
 target2.height=70
+<<<<<<< Updated upstream
 target2.name=Quick_Sort_TestV3A
 target2.showInterface=false
 target2.type=ClassTarget
@@ -51,3 +60,25 @@ target4.type=ClassTarget
 target4.width=120
 target4.x=10
 target4.y=90
+=======
+target2.name=Quick_Sort_TestV2
+target2.showInterface=false
+target2.type=ClassTarget
+target2.width=140
+target2.x=140
+target2.y=90
+target3.height=70
+target3.name=Quick_Sort_Test
+target3.showInterface=false
+target3.type=ClassTarget
+target3.width=120
+target3.x=10
+target3.y=90
+target4.height=70
+target4.name=Quick_Sort_Test_Replication_or_what_its_called
+target4.showInterface=false
+target4.type=ClassTarget
+target4.width=320
+target4.x=10
+target4.y=170
+>>>>>>> Stashed changes
