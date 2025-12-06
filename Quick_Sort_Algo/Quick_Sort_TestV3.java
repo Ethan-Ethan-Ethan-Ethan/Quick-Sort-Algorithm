@@ -4,7 +4,7 @@
  * @ Aidan, Liam, and Lorne.
  * @ Dec 2 - #, 2025.
  */
-public class Quick_Sort_TestV3A
+public class Quick_Sort_TestV3
 {
     public static void main(String[] args) 
     {
