@@ -1,8 +1,0 @@
-#BlueJ class context
-comment0.target=Quick_Sort_TestV2
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ Quick_Sort_Test\ here.\r\n\r\n\ @\ Aidan,\ Liam,\ and\ Lorne.\r\n\ @\ Dec\ 2\ -\ \#,\ 2025.\r\n
-comment1.params=args
-comment1.target=void\ main(java.lang.String[])
-comment2.params=list\ number
-comment2.target=int\ quickSearch(int[],\ int)
-numComments=3
