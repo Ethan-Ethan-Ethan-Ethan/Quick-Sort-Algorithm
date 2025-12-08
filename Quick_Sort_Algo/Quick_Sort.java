@@ -10,6 +10,10 @@ public class Quick_Sort
     {
         // Create a list to be sorted
         int[] list = {4,9,6,7,5,8,3,1,2};
+        //int[] list = {7,3,8,11,73,73,89,3,3,689,3,1,6,9,5,42,17};
+        //int[] list = {9,5};
+        //int[] list = {9,5,550,215,754,152,10,432,474,321,326,215,236,272,48,3,69,324,234,237};
+        
         // Perform the Quick Sort task
         quickSplit(list);
         
