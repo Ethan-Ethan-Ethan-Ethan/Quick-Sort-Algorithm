@@ -10,7 +10,7 @@ public class Quick_Sort_Test_Case
     {
         // Create a list to be sorted
         int[] list = {7,3,8,11,73,73,89,3,3,689,3,1,6,9,5,42,17};
-        // Peform the Quick Sort task
+        // Perform the Quick Sort task
         quickSplit(list);
         
         // Print out all of the elements within the newly sorted list

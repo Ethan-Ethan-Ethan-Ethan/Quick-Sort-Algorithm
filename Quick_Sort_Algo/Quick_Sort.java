@@ -10,7 +10,7 @@ public class Quick_Sort
     {
         // Create a list to be sorted
         int[] list = {4,9,6,7,5,8,3,1,2};
-        // Peform the Quick Sort task
+        // Perform the Quick Sort task
         quickSplit(list);
         
         // Print out all of the elements within the newly sorted list
