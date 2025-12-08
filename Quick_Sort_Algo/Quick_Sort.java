@@ -1,8 +1,8 @@
 /**
- * Write a description of class Quick_Sort_Test here.
+ * This is a program that will Quick Sort any list in numerical order.
  *
  * @ Aidan, Liam, and Lorne.
- * @ Dec 2 - #, 2025.
+ * @ Dec 2 - 7, 2025.
  */
 public class Quick_Sort
 {
