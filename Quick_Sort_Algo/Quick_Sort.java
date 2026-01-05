@@ -1,56 +1,113 @@
 /**
- * Write a description of class Quick_Sort here.
+ * This is a program that will Quick Sort any list in numerical order.
  *
  * @ Aidan, Liam, and Lorne.
- * @ Dec 2 - #, 2025.
+ * @ Dec 2 - 7, 2025.
  */
 public class Quick_Sort
 {
     public static void main(String[] args) 
     {
+        // Create a list to be sorted
         int[] list = {4,9,6,7,5,8,3,1,2};
-        int number = 0;
+        //int[] list = {7,3,8,11,73,73,89,3,3,689,3,1,6,9,5,42,17};
+        //int[] list = {9,5};
+        //int[] list = {9,5,550,215,754,152,10,432,474,321,326,215,236,272,48,3,69,324,234,237};
         
-        quickSearch(list, number);
-    }
-    
-    public static int quickSearch(int[] list, int number)
-    {
-        int[] small = {0,0,0,0,0,0,0,0,0};
-        int[] big = {0,0,0,0,0,0,0,0,0};
+        // Perform the Quick Sort task
+        quickSplit(list);
         
-        /*
-        System.out.println(list);
-        number = list.length - 1;
-        for(int i = 1; i < list.length; i++)
-        {
-            if(number <= (list.length - i))
-            {
-                System.out.println(list);
-            }
-        }
-        return number;
-        */
-        
-        number = list[list.length/2];
-         
+        // Print out all of the elements within the newly sorted list
         for(int i = 0; i < list.length; i++)
         {
-            System.out.print(list[i]);
-            if(list[i] > number)
+            System.out.print(list[i] + " ");
+        }
+        System.out.println("\n");
+    }
+    
+    public static void quickSplit(int[] list)
+    {
+        // Return only when the length of the list is 0 or 1 (already sorted)
+        if (list.length < 2) {
+            return;
+        }
+        
+        // Calculate the middle value of the list (Pivot)
+        int middle = list[list.length/2];
+        // Used to count each element for the new arrays (smaller, equal, bigger)
+        int bigCount = 0;
+        int smallCount = 0;
+        int equalCount = 0;
+        
+        // Calculate the length for each of the new arrays
+        for(int i = 0; i < list.length; i++)
+        {
+            if(list[i] > middle)
             {
-                System.out.println(" is Bigger");
+                bigCount++;
             }
-            else if(list[i] == number)
+            else if (list[i] < middle)
             {
-                System.out.println(" is Equal");
+                smallCount++;
             }
-            else
+            else if(list[i] == middle)
             {
-                System.out.println(" is Smaller");
+                equalCount++;
             }
         }
         
-        return number;
+        // Create new arrays that will be used to categorized each element (smaller, equal, larger)
+        int[] big = new int[bigCount];
+        int[] small = new int[smallCount];
+        int[] equal = new int [equalCount];
+        
+        // Used to track the index to fill the new arrays
+        int bigger = 0;
+        int smaller = 0;
+        int equalIndex = 0;
+        
+        // Sort each value into it's correct group (smaller, equal, bigger)
+        for(int i = 0; i < list.length; i++)
+        {
+            if(list[i] > middle)
+            {
+                big[bigger] = list[i];
+                bigger++;
+            }
+            else if (list[i] < middle)
+            {
+                small[smaller] = list[i];
+                smaller++;
+            }
+            else if(list[i] == middle) 
+            {
+                equal[equalIndex] = list[i];
+                equalIndex++;
+            }
+        }
+        
+        // Used to sort left and right
+        quickSplit(small);
+        quickSplit(big);
+        
+        // Used to store all the three array's elements back into the original list
+        int index = 0;
+       
+        // Put the new sorted array into the original list
+        for(int i = 0; i < small.length; i++) 
+        {
+           list[index] = small[i];
+           index++;
+        }
+        for(int i = 0; i < equal.length; i++) 
+        {
+           list[index] = equal[i];
+           index++;
+        }
+        for(int i = 0; i < big.length; i++) 
+        {
+           list[index] = big[i];
+           index++;
+        }
     }
 }
