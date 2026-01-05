@@ -66,7 +66,7 @@ public class Quick_Sort
         int smaller = 0;
         int equalIndex = 0;
         
-       // Sort each value into it's correct group (smaller, equal, bigger)
+        // Sort each value into it's correct group (smaller, equal, bigger)
         for(int i = 0; i < list.length; i++)
         {
             if(list[i] > middle)
@@ -91,21 +91,21 @@ public class Quick_Sort
         quickSplit(big);
         
         // Used to store all the three array's elements back into the original list
-       int index = 0;
+        int index = 0;
        
-       // Put the new sorted array into the original list
-       for(int i = 0; i < small.length; i++) 
-       {
+        // Put the new sorted array into the original list
+        for(int i = 0; i < small.length; i++) 
+        {
            list[index] = small[i];
            index++;
         }
         for(int i = 0; i < equal.length; i++) 
-       {
+        {
            list[index] = equal[i];
            index++;
         }
         for(int i = 0; i < big.length; i++) 
-       {
+        {
            list[index] = big[i];
            index++;
         }
